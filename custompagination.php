@@ -3,7 +3,7 @@
 Plugin Name: Custom Pagination
 Description: Turns post links with the Link URL 'page:next|prev|first|last|1|2|3|...' into an actual link to the corresponding page. If the page is invalid, the link is hidden. Developed for DateDaily.com 
 Author: Dimitry Zolotaryov
-Version: 1.0
+Version: 1.0.2
 Author URI: http://webit.ca
 */
 

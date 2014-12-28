@@ -3,8 +3,8 @@ Contributors: dimitryz
 Funded by: Mate1 Inc.
 Tags: editing, pagination
 Requires at least: 2.8
-Tested up to: 2.8
-Stable tag: 1.0
+Tested up to: 4.1
+Stable tag: 1.0.2
 
 The Custom Pagination plugin allows a user to insert custom next, previous or numbered page links into a post.
 
@@ -59,3 +59,18 @@ It should.
 *What is the cost of the plugin?*
 
 This plugin is provided free of charge thanks to the good people at [Mate1 Inc](http://mate1.com) and the site [DateDaily.com](http://datedaily.com). You may use the Custom Pagination plugin for any purpose provided you keep the comment section of the custompagination.php file.
+
+*How do I remove the default pagination*
+
+If you are seeing the default pagination in your posts, you probably have the following code in you `content.php` theme file. Remove it and the default pagination should disappear. 
+
+<pre><code>
+    wp_link_pages( array(
+        'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
+        'after'       => '</div>',
+        'link_before' => '<span>',
+        'link_after'  => '</span>',
+        'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
+        'separator'   => '<span class="screen-reader-text">, </span>',
+    ) );
+</code></pre>
